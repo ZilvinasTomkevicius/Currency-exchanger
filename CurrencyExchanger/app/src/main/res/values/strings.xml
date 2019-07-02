@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CurrencyExchanger</string>
+    <string name="insert_exchange_amount">Insert exchange amount</string>
+    <string name="convert_from">convert from</string>
+    <string name="convert_to">convert to</string>
+    <string name="convert">Convert</string>
+    <string name="error_data">Could not load data</string>
+    <string name="add_new_currency_explanation">Write currency shortening ex. (EUR, USD..)</string>
+    <string name="currency">Currency</string>
+    <string name="refresh">Refresh</string>
+</resources>
