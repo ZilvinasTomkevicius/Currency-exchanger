@@ -194,16 +194,14 @@ class MainActivity : AppCompatActivity() {
         if(!exchangeEntity.fromCurrency.equals(exchangeEntity.toCurrency)) {
             for(w in viewModel.walletList.value!!) {
                 if(w.currency.equals(exchangeEntity.fromCurrency)) {
-                    if(w.amount!!.compareTo(0).equals(1))
+                    if(w.amount!!.compareTo(0).equals(1)) {
                         if(exchangeEntity.fromAmount!!.compareTo(w.amount!!) <= 0) {
                             exchange.isEnabled = false
                             return true
-                        } else {
-                            Snackbar.make(swipeRefreshLayout, "You don't have the amount in your wallet!", Snackbar.LENGTH_SHORT).show()
-                        }
-                    else {
-                        Snackbar.make(swipeRefreshLayout, "You don't have the amount in your wallet!", Snackbar.LENGTH_SHORT).show()
-                    }
+                        } else
+                            Snackbar.make(swipeRefreshLayout, "You don't have the amount in your wallet!", Snackbar.LENGTH_SHORT).show()                       
+                    } else
+                        Snackbar.make(swipeRefreshLayout, "You don't have the amount in your wallet!", Snackbar.LENGTH_SHORT).show()                    
                 }
             }
         } else
