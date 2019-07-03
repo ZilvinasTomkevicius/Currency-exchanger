@@ -195,7 +195,7 @@ class MainActivity : AppCompatActivity() {
             for(w in viewModel.walletList.value!!) {
                 if(w.currency.equals(exchangeEntity.fromCurrency)) {
                     if(w.amount!!.compareTo(0).equals(1))
-                        if(exchangeEntity.fromAmount!!.compareTo(w.amount!!).equals(-1)) {
+                        if(exchangeEntity.fromAmount!!.compareTo(w.amount!!) <= 0) {
                             exchange.isEnabled = false
                             return true
                         } else {
